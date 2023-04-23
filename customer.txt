@@ -1,0 +1,30 @@
+package MyShop;
+
+import java.util.*;
+public class Customer {
+	String cname;
+    String address;
+    int pincode;
+
+    // get customer data
+    public void getData() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Customer Name: ");
+        cname = sc.nextLine();
+        System.out.print("Enter Address: ");
+        address = sc.nextLine();
+        System.out.print("Enter Pincode: ");
+        pincode = sc.nextInt();
+    }
+
+    // display customer data
+    void showData() {
+        System.out.println("Name = " + cname);
+        System.out.println("Address = " + address);
+        System.out.println("Pincode = " + pincode);
+    }
+
+
+	
+
+}
