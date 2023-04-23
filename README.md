@@ -1,6 +1,47 @@
 
 
 package MyShop;
+public class flower {
+	String name;
+	int no_of_petals; 
+	double price; 
+	int no_of_pieces;
+	double total_price;
+	// No argument constructor
+    	public flower() {
+        this.name = "Rose";
+        this.no_of_petals = 10;
+        this.price = 50.0;
+        this.no_of_pieces = 1;
+        this.total_price = this.price * this.no_of_pieces;
+    	}
+    // Parameterized constructor
+        public flower(String name, int no_of_petals, double price, int no_of_pieces) {
+            this.name = name;
+            this.no_of_petals = no_of_petals;
+            this.price = price;
+            this.no_of_pieces = no_of_pieces;
+            this.total_price = this.price * this.no_of_pieces;
+        }
+               public double calculate_discount() {
+	            if (this.total_price > 2000) {
+	                return 200;
+	            } else {
+	                return 100;
+	            }
+	        }
+	        // Display Function
+	        public void display() {
+	            System.out.println("Flower Name = " + this.name);
+	            System.out.println("Number of Petals = " + this.no_of_petals);
+	            System.out.println("Price per Piece = " + this.price);
+	            System.out.println("Number of Pieces = " + this.no_of_pieces);
+	            System.out.println("Total Price = " + this.total_price);
+	            double discount = this.calculate_discount();
+	            System.out.println("Discount = " + discount);
+	            System.out.println("Price after Discount = " + (this.total_price - discount));
+	        }
+package MyShop;
 import java.util.*;
 public class AllData {
 	public static void main(String[] args) {
