@@ -1,1 +1,45 @@
-# codef
+package MyShop;
+import java.util.*;
+public class AllData {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        int choice;
+        // loop for displaying menu repeatedly
+        do {
+            System.out.println("1. Flower");
+            System.out.println("2. Customer");
+            System.out.println("0. Exit");
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+                switch (choice) {
+                case 1:
+                    System.out.println("\nFLOWER DETAILS");
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter flower name = ");
+                    String name = scanner.nextLine();
+                    System.out.print("Enter no of petals = ");
+                    int no_of_petals = scanner.nextInt();
+                    System.out.print("Enter price = ");
+                    double price = scanner.nextDouble();
+                    System.out.print("Enter no of pieces = ");
+                    int no_of_pieces = scanner.nextInt();
+                    flower f = new flower(name, no_of_petals, price, no_of_pieces);
+                    f.display();
+                    break;
+                    case 2:
+                    Customer c = new Customer();
+                    System.out.println("\nCUSTOMER DETAILS");
+                    c.getData();
+                    c.showData();
+                    break;
+                    case 0:
+                    System.out.println("\nThank you for using our application!");
+                    break;
+
+                default:
+                    System.out.println("\nInvalid choice! Please try again.");
+                    break;
+            }
+        } while (choice != 0);
+
+	}
