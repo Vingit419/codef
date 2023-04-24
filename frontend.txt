@@ -1,0 +1,32 @@
+package day6;
+import java.util.Scanner;
+public class spynumber {
+
+    
+
+	public static void main(String[] args) {
+Scanner in = new Scanner(System.in);
+        
+        System.out.print("Enter Number: ");
+        int num = in.nextInt();
+        
+        int digit, sum = 0;
+        int orgNum = num;
+        int prod = 1;
+        
+        while (num > 0) {
+            digit = num % 10;
+            
+            sum += digit;
+            prod *= digit;
+            num /= 10;
+        }
+        
+        if (sum == prod)
+            System.out.println(orgNum + " is Spy Number");
+        else
+            System.out.println(orgNum + " is not Spy Number");
+        
+	}
+
+}
